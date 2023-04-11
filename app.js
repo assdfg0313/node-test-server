@@ -1,25 +1,18 @@
 const express = require("express");
+const userRouter = require("./routes/user");
+const tweetRouter = require("./routes/tweet");
 
 const app = express();
 
 const port = 3010;
 
+app.use("/user", userRouter);
+app.use("/tweet", tweetRouter);
+
 app.get("/", (req, res) => {
-  res.send("Hello, Express!");
-});
-app.get("/abc", (req, res) => {
-  res.send("Hello, ABC ABC!!");
-});
-app.post("/", (req, res) => {
-  res.json("This is Post Request");
-});
-app.put("/", (req, res) => {
-  res.json("This is put Request");
-});
-app.delete("/", (req, res) => {
-  res.json("This is delete Request");
+  res.send("Hello, Express!!@@@@@@!!!!!!!!");
 });
 
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`Server listening on port: ${port} 🚀🚀🚀`);
 });
